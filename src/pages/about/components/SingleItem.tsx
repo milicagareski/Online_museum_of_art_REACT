@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AboutItem from "./about.types";
 import { ShowHideTextButton } from "../../../hooks/ShowHideTextButton";
 
@@ -18,7 +18,7 @@ export default function SingleItem({ singleItem }: SingleItemProps) {
     <li className="about-article" key={id}>
       <h1>{title}</h1>
       <img src={image} alt={title} />
-      <p>{showText ? info : `${info.slice(0, 200)}`}</p>
+      <p>{showText ? info : info.slice(0, 200)}</p>
       <ShowHideTextButton
         toggleTextVisibility={toggleTextVisibility}
         showText={showText}
