@@ -8,12 +8,7 @@ function BuyTicket() {
       <div className="ticket">
         <Location />
         <Link to="/visit" className="link">
-          Buy your ticket <span id="now">now</span>
-        </Link>
-        <Link to="/visit" className="link">
-          <span id="ticket-icon">
-            <i className="fa-solid fa-ticket"></i>
-          </span>
+          <h4>Buy your ticket</h4>
         </Link>
       </div>
     </article>

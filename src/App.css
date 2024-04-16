@@ -70,8 +70,24 @@ h4 {
   letter-spacing: var(--letter-spacing);
   text-transform: uppercase;
   text-align: center;
-  margin-left: 3rem;
-  display: none;
+  margin-top: -1.5rem;
+  border: 1px solid var(--third-color);
+  background-color: var(--third-color);
+  border: 1px solid var(--forth-color);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+h4:hover {
+  background-color: var(--forth-color);
+  border-color: var(--forth-color);
+  color: var(--third-color);
+  transition: var(--transition);
+}
+
+h5 {
+  color: var(--third-color);
+  margin-top: -2rem;
 }
 
 p {
@@ -179,6 +195,7 @@ ul {
   padding-bottom: 2rem;
   transition: var(--transition);
   overflow: hidden;
+  height: 620px;
 }
 
 /* Home page */
@@ -208,6 +225,10 @@ img {
 .ticket-container a {
   color: var(--third-color);
   font-size: 2rem;
+}
+
+.ticket h4 {
+  margin-top: 1rem;
 }
 
 .ticket {
@@ -434,4 +455,61 @@ textarea {
 
 #visit-info {
   color: var(--forth-color);
+}
+
+#ticket-link {
+  background-color: var(--third-color);
+}
+
+.container-offer {
+  /* width: 100%; */
+  /* min-height: 100vh; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-weight: 600;
+  /* font-size: 70px; */
+  font-size: 3rem;
+  line-height: 65px;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: transparent;
+  background-clip: text;
+  background-size: 400%;
+  animation: move 5s ease infinite;
+  background-image: linear-gradient(
+    68.7deg,
+    rgb(21, 56, 71) 13.2%,
+    rgb(22, 29, 95) 29.8%,
+    rgb(104, 26, 92) 48.9%,
+    rgb(109, 16, 46) 68.2%,
+    rgb(112, 52, 18) 86.4%
+  );
+}
+
+.offer h3 {
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.offer h4 {
+  margin-top: 1.5rem;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    background-position: 200% 0%;
+    scale: 1;
+  }
+
+  50% {
+    background-position: 0% 200%;
+    scale: 1.2;
+  }
 }

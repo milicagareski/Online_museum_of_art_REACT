@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ShowHideTextButtonProps {
   toggleTextVisibility: () => void;
   showText: boolean;

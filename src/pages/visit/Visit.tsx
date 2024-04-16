@@ -1,4 +1,3 @@
-import React from "react";
 import VisitHeader from "./components/VisitHeader";
 import VisitBuildings from "./components/VisitBuildings";
 
