@@ -1,12 +1,16 @@
-import React from 'react'
+import { useState } from "react";
+import ChechoutHeader from "./components/ChechoutHeader";
+import ShoppingCart from "./components/ShopingCard";
+import Summary from "./components/Summary";
 
 export default function Checkout() {
+  const [totalPrice, setTotalPrice] = useState(0);
+
   return (
-    <article className='ticket-container'>
-      <h1>
-        Checkout
-      </h1>
-    </article>
-    
-  )
+    <section className="ticket-container">
+      <ChechoutHeader />
+      <ShoppingCart setTotalPrice={setTotalPrice} />
+      <Summary totalPrice={totalPrice} />
+    </section>
+  );
 }

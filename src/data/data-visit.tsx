@@ -28,7 +28,7 @@ export const buildings = [
     title: "Museum of Sculptures",
     image: "https://blog.architizer.com/wp-content/uploads/10-86.jpg",
     info: `Situated at the intersection of art and architecture, our museum stands as a testament to the beauty and power of three-dimensional expression. From the moment you approach its grand entrance, you are greeted by a symphony of form and texture, the building itself a work of art designed to complement and enhance the sculptures it houses.Constructed from sleek lines and graceful curves, our museum's modernist façade serves as a fitting canvas for the sculptural masterpieces within. Towering glass walls invite natural light to flood the interior, casting ethereal shadows that dance across the gallery floors and illuminate each sculpture with an otherworldly glow.`,
-    price: 120,
+    price: 180,
   },
   {
     id: 4,
