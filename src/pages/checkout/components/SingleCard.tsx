@@ -12,8 +12,8 @@ export default function SingleCard(props: SingleCardProps) {
   return (
     <article className="buy-card">
       <label htmlFor={`museum_${building.id}`}>
-        <h1>{building.title}</h1>
-        <h2>{` $${building.price}`}</h2>
+        <h1 id="building-title">{building.title}</h1>
+        <h2 id="building-price">{` $${building.price}`}</h2>
       </label>
       <input
         id={`museum_${building.id}`}

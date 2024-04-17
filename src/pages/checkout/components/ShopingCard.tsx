@@ -44,11 +44,13 @@ export default function ShopingCard() {
         ))}
       </form>
       <article>
-        <h1>Total: ${total}</h1>
+        <h1 id="total">Total: ${total}</h1>
       </article>
       <button
         className="btn pay-btn"
-        onClick={() => {
+        type="submit"
+        onClick={(e) => {
+          e.preventDefault();
           setPayment(true);
         }}
       >

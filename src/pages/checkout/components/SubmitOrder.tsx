@@ -6,13 +6,20 @@ interface SingleOrderProps {
 
 export default function SubmitOrder(props: SingleOrderProps) {
   const { payment, submitOrder, setSubmitOrder } = props;
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setSubmitOrder(true);
+  };
+
   return (
     <>
       {payment && (
         <>
           {submitOrder && (
             <article>
-              <p id="success">order successfully submited</p>
+              <p id="success" style={{ color: "green" }}>
+                order successfully submited
+              </p>
             </article>
           )}
           <article>
@@ -36,13 +43,7 @@ export default function SubmitOrder(props: SingleOrderProps) {
                 />
               </label>
 
-              <button
-                className="btn submit-btn"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setSubmitOrder(true);
-                }}
-              >
+              <button className="btn submit-btn" onClick={handleSubmit}>
                 submit order
               </button>
             </form>
