@@ -470,6 +470,9 @@ textarea {
   align-items: center;
 }
 
+.hide-btn {
+  display: none;
+}
 .text {
   font-weight: 600;
   /* font-size: 70px; */
@@ -561,4 +564,27 @@ form label h2 {
 .buy-card h2,
 .buy-card input {
   margin-top: -1rem;
+}
+
+.pay-btn {
+  margin-bottom: 4rem;
+}
+
+#payment {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+#payment h2 {
+  font-size: 1rem;
+  color: var(--forth-color);
+  font-style: normal;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+}
+
+#success {
+  text-transform: uppercase;
 }

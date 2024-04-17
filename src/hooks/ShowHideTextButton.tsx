@@ -9,8 +9,11 @@ export const ShowHideTextButton = ({
 }: ShowHideTextButtonProps) => {
   return (
     <>
-      <button className="btn" onClick={toggleTextVisibility}>
-        {!showText ? "Read more" : "Show less"}
+      <button
+        className={`btn ${showText && "hide-btn"}`}
+        onClick={toggleTextVisibility}
+      >
+        {!showText ? "Read more" : ""}
       </button>
     </>
   );

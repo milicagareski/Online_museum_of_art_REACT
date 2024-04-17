@@ -1,42 +1,26 @@
-import React, { useState } from "react";
+import { Building } from "../../../data/data-visit";
 
 interface SingleCardProps {
-  ticket: Item;
-  handleTotalPrice: (price: number) => void;
+  building: Building;
+  index: number;
+  buildingInputs: number[];
+  setInput: (index: number, value: number) => unknown;
 }
 
-interface Item {
-  id: number;
-  title: string;
-  price: number;
-}
-
-export function SingleCard(props: SingleCardProps) {
-  const { ticket, handleTotalPrice } = props;
-  const [cards, setCards] = useState(0);
-
-  const setInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = Number(e.target.value);
-    if (value >= 0) {
-      setCards(value);
-      handleTotalPrice(value * ticket.price);
-    } else {
-      setCards(0);
-    }
-  };
-
+export default function SingleCard(props: SingleCardProps) {
+  const { building, index, buildingInputs, setInput } = props;
   return (
-    <article key={ticket.id} className="buy-card">
-      <label htmlFor={`museum_${ticket.id}`}>
-        <h1>{ticket.title}</h1>
-        <h2>{` $${ticket.price}`}</h2>
+    <article className="buy-card">
+      <label htmlFor={`museum_${building.id}`}>
+        <h1>{building.title}</h1>
+        <h2>{` $${building.price}`}</h2>
       </label>
       <input
-        id={`museum_${ticket.id}`}
+        id={`museum_${building.id}`}
         type="number"
-        name={`museum_${ticket.id}`}
-        value={cards}
-        onChange={setInput}
+        name={`museum_${building.id}`}
+        value={buildingInputs[index]}
+        onChange={(e) => setInput(index, Number(e.target.value))}
         className="input-ticket"
       />
     </article>

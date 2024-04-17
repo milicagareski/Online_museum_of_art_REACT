@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function ChechoutHeader() {
+export default function CheckoutHeader() {
   return (
     <article className="container-header checkout-header">
       <h2>Did you find out about our amazing offer?</h2>

@@ -1,28 +1,64 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { buildings } from "../../../data/data-visit";
-import { SingleCard } from "./SingleCard";
+import SingleCard from "./SingleCard";
+import SubmitOrder from "./SubmitOrder";
 
-interface ShoppingCartProps {
-  setTotalPrice: React.Dispatch<React.SetStateAction<number>>;
-}
+export default function ShopingCard() {
+  const [total, setTotal] = useState<number>(0);
+  const [payment, setPayment] = useState(false);
+  const [submitOrder, setSubmitOrder] = useState(false);
 
-export default function ShoppingCart(props: ShoppingCartProps) {
-  const { setTotalPrice } = props;
-  const [total, setTotal] = useState(0);
+  const [buildingInputs, setBuildingInputs] = useState<number[]>(
+    buildings.map(() => 0)
+  );
 
-  const handleTotalPrice = (price: number) => {
-    setTotalPrice(total + price);
+  const setInput = (index: number, value: number) => {
+    const newInputs = [...buildingInputs];
+    newInputs[index] = value;
+    setBuildingInputs(newInputs);
   };
 
+  const calculateTotal = () => {
+    let totalPrice = 0;
+    buildingInputs.forEach((input, index) => {
+      totalPrice += input * buildings[index].price;
+    });
+    setTotal(totalPrice);
+  };
+
+  useEffect(() => {
+    calculateTotal();
+  }, [buildingInputs]);
+
   return (
-    <form>
-      {buildings.map((building) => (
-        <SingleCard
-          key={building.id}
-          ticket={building}
-          handleTotalPrice={handleTotalPrice}
-        />
-      ))}
-    </form>
+    <>
+      <form>
+        {buildings.map((building, index) => (
+          <SingleCard
+            key={building.id}
+            building={building}
+            index={index}
+            buildingInputs={buildingInputs}
+            setInput={setInput}
+          />
+        ))}
+      </form>
+      <article>
+        <h1>Total: ${total}</h1>
+      </article>
+      <button
+        className="btn pay-btn"
+        onClick={() => {
+          setPayment(true);
+        }}
+      >
+        PAY NOW
+      </button>
+      <SubmitOrder
+        payment={payment}
+        submitOrder={submitOrder}
+        setSubmitOrder={setSubmitOrder}
+      />
+    </>
   );
 }

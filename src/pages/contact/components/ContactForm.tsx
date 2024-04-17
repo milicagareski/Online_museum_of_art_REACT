@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ContactForm() {
   return (
     <section className="form">
@@ -10,8 +8,8 @@ export default function ContactForm() {
         <textarea
           name=""
           id="contact-textarea"
-          cols={10}
-          rows={4}
+          cols={23}
+          rows={5}
           placeholder="write your question here"
         ></textarea>
       </form>

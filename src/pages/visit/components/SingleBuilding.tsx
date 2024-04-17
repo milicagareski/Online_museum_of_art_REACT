@@ -11,7 +11,7 @@ export default function SingleBuilding({ building }: BuildingProps) {
   const [showText, setShowText] = useState(false);
 
   const toggleBtn = () => {
-    setShowText(!showText);
+    setShowText(true);
   };
   return (
     <li key={id}>
@@ -21,11 +21,11 @@ export default function SingleBuilding({ building }: BuildingProps) {
         <h4>buy ticket</h4>
       </article>
       <img src={image} alt={title} />
-      <p>{showText ? info : info.slice(0, 200)}</p>
       <ShowHideTextButton
         toggleTextVisibility={toggleBtn}
         showText={showText}
       />
+      <p>{`${showText ? info : ""}`}</p>
     </li>
   );
 }
