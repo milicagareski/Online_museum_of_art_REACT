@@ -15,6 +15,9 @@ export default function ShopingCard() {
   const setInput = (index: number, value: number) => {
     const newInputs = [...buildingInputs];
     newInputs[index] = value;
+    if (value < 0) {
+      newInputs[index] = 0;
+    }
     setBuildingInputs(newInputs);
   };
 

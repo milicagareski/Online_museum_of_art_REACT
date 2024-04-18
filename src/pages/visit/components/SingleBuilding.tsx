@@ -14,7 +14,7 @@ export default function SingleBuilding({ building }: BuildingProps) {
     setShowText(!showText);
   };
   return (
-    <li key={id} style={{ backgroundColor: "grey" }}>
+    <li key={id}>
       <h1>{title}</h1>
       <h5>Entry price: ${price}</h5>
       <article className="link" id="ticket-link">
