@@ -6,7 +6,7 @@ export default function AboutInfo() {
   return (
     <ul className="about-info">
       {aboutData.map((item: AboutItem) => (
-        <SingleItem singleItem={item} />
+        <SingleItem key={item.id} singleItem={item} />
       ))}
     </ul>
   );

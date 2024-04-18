@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface SingleOrderProps {
   payment: boolean;
   submitOrder: boolean;
@@ -6,9 +8,18 @@ interface SingleOrderProps {
 
 export default function SubmitOrder(props: SingleOrderProps) {
   const { payment, submitOrder, setSubmitOrder } = props;
+  const [creditCard, setCreditCard] = useState("");
+  const [sequrutyNum, setSequrutyNum] = useState("");
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    setSubmitOrder(true);
+    if (creditCard && sequrutyNum) {
+      setSubmitOrder(true);
+      setCreditCard("");
+      setSequrutyNum("");
+      setTimeout(() => {
+        setSubmitOrder(false);
+      }, 3000);
+    }
   };
 
   return (
@@ -31,6 +42,10 @@ export default function SubmitOrder(props: SingleOrderProps) {
                   id="credit-card"
                   required
                   placeholder="credit card number"
+                  value={creditCard}
+                  onChange={(e) => {
+                    setCreditCard(e.target.value);
+                  }}
                 />
               </label>
               <label htmlFor="security-code">
@@ -40,6 +55,10 @@ export default function SubmitOrder(props: SingleOrderProps) {
                   id="sequrity-code"
                   required
                   placeholder="sequrity code"
+                  value={sequrutyNum}
+                  onChange={(e) => {
+                    setSequrutyNum(e.target.value);
+                  }}
                 />
               </label>
 

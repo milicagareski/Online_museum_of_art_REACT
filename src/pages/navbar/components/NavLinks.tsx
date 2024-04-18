@@ -25,7 +25,7 @@ function NavLinks({ showNav, toggleBtn }: NavLinksProps) {
     <nav ref={linksContainerRef} className={showNav ? "show-nav" : "hide-nav"}>
       <ul ref={linksRef} className="nav-links">
         {NavLinksData.map((link: LinkData) => (
-          <SingleLink toggleBtn={toggleBtn} singleLink={link} />
+          <SingleLink key={link.id} toggleBtn={toggleBtn} singleLink={link} />
         ))}
       </ul>
     </nav>
