@@ -11,7 +11,7 @@ export default function FilteredItems({ handleSubmit }: FilteredItemsProps) {
       <select name="departments" id="departments-select">
         <option value="Collection">ALL COLLECTION</option>
         <option value="Paintings">PAINTINGS</option>
-        <option value="Photographs">PHOTOGRAPHY</option>
+        <option value="Photography">PHOTOGRAPHY</option>
         <option value="Sculptures">SCULPTURES</option>
         <option value="Statues">STATUES</option>
       </select>

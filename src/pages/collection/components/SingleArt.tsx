@@ -23,8 +23,8 @@ export default function SingleArt({ item }: any) {
       <img src={item.images.web.url} alt={item.title} />
       <article className="decrtiption">
         <h6>WANT TO KNOW MORE?</h6>
-        <Link to={item.url} target="blank">
-          <button className="btn">CLICK HERE</button>
+        <Link to={`/collection/${item.id}`} target="_blank">
+          <button className="btn">READ HERE</button>
         </Link>
       </article>
     </li>

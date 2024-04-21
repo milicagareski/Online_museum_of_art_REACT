@@ -10,6 +10,7 @@ import Checkout from "./pages/checkout";
 import Error from "../src/pages/error";
 import Footer from "./pages/footer";
 import Visit from "./pages/visit/Visit";
+import SingleItemDetails from "./pages/collection/components/SingleItemDetails";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/collection" element={<Collection />} />
+          <Route path="/collection/:itemId" element={<SingleItemDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/visit" element={<Visit />} />
           <Route path="/checkout" element={<Checkout />} />

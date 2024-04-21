@@ -14,18 +14,12 @@ export default function Collection() {
     e.preventDefault();
     const value = (
       e.currentTarget.elements.namedItem("departments") as HTMLSelectElement
-    )?.value;
-    if (value === "Collection") {
+    )?.value.toLowerCase();
+
+    if (value === "collection") {
       setCollection("http://localhost:5000/api/artworks");
-    }
-    if (value === "Paintings") {
-      setCollection("http://localhost:5000/api/artworks/paintings");
-    } else if (value === "Photographs") {
-      setCollection("http://localhost:5000/api/artworks/photography");
-    } else if (value === "Sculptures") {
-      setCollection("http://localhost:5000/api/artworks/sculptures");
-    } else if (value === "Statues") {
-      setCollection("http://localhost:5000/api/artworks/statues");
+    } else {
+      setCollection(`http://localhost:5000/api/artworks/${value}`);
     }
   };
 
