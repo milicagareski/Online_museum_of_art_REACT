@@ -705,3 +705,21 @@ form label h2 {
   color: var(--forth-color);
   font-weight: bold;
 }
+
+.art {
+  margin-top: -2rem;
+}
+
+.art h6 {
+  font-size: 1.5rem;
+  color: var(--forth-color);
+}
+
+.art h5 {
+  text-transform: uppercase;
+}
+
+.technique,
+.desc {
+  margin-top: -3rem;
+}
