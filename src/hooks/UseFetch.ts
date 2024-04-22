@@ -1,12 +1,31 @@
 import { useState, useEffect } from 'react';
 
-const useFetch = (url:string) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [items, setItems] = useState([]);
+export interface GalleryItem {
+  id: any;
+  title: any;
+  did_you_know: any;
+  images: any;
+  creation_date: any;
+  technique: any;
+  description: any;
+}
 
-  const fetchData = async () => {
+export type FetchResult = {
+  isLoading: boolean;
+  items: GalleryItem | GalleryItem[]; // Allow for single object or array
+  error?: Error | null;
+}
+
+const useFetch = (url: string) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [items, setItems] = useState<GalleryItem | GalleryItem[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const controller = new AbortController();
+      const abortSignal = controller.signal;
       try {
-        const response = await fetch(url);
+        const response = await fetch(url,{ signal: abortSignal });
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
@@ -19,7 +38,6 @@ const useFetch = (url:string) => {
       }
     };
 
-  useEffect(() => {
     fetchData();
   }, [url]);
 
@@ -27,5 +45,3 @@ const useFetch = (url:string) => {
 };
 
 export default useFetch;
-
- 

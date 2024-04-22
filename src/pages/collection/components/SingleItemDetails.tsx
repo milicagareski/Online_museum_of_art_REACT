@@ -12,30 +12,30 @@ export default function SingleItemDetails() {
     return <div>Loading...</div>;
   }
 
-  console.log(items);
+  const item = Array.isArray(items) ? items[0] : items;
 
   return (
     <section className="container">
       <article>
         <h6>TITLE:</h6>
-        <h5>{items.title}</h5>
+        <h5>{item.title}</h5>
       </article>
       <article className="art">
         <h6>DID YOU KNOW:</h6>
-        <h5>{items.did_you_know}</h5>
+        <h5>{item.did_you_know}</h5>
       </article>
-      <img src={items.images.web.url} alt={items.title} />
+      <img src={item.images.web.url} alt={item.title} />
       <article>
         <h6>CREATION DATE:</h6>
-        <h5>{items.creation_date}</h5>
+        <h5>{item.creation_date}</h5>
       </article>
       <article className="technique">
         <h6>TECHNIQUE:</h6>
-        <h5>{items.technique}</h5>
+        <h5>{item.technique}</h5>
       </article>
       <article className="desc">
         <h6>DESCRIPTION:</h6>
-        <h5>{items.description}</h5>
+        <h5>{item.description}</h5>
       </article>
     </section>
   );

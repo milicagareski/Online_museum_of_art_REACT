@@ -4,6 +4,7 @@ import SingleArt from "./components/SingleArt";
 import FilteredItems from "./components/FilteredItems";
 import useFetch from "../../hooks/UseFetch";
 import usePagination from "../../hooks/UsePagination";
+import { GalleryItem } from "../../hooks/UseFetch"; // Import the GalleryItem type
 
 export default function Collection() {
   const [collection, setCollection] = useState(
@@ -11,7 +12,7 @@ export default function Collection() {
   );
   const { isLoading, items } = useFetch(collection);
   const { pageNumber, pageCount, changePage, pageData } = usePagination(
-    items,
+    Array.isArray(items) ? items : [items], // Ensure items is an array
     20
   );
 
@@ -48,7 +49,7 @@ export default function Collection() {
           <CollectionHeader />
           <FilteredItems handleSubmit={handleSubmit} />
           <ul>
-            {pageData().map((item: any) => (
+            {pageData().map((item: GalleryItem) => (
               <SingleArt key={item.id} item={item} />
             ))}
           </ul>
