@@ -1,11 +1,16 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../../../hooks/UseFetch";
+import usePagination from "../../../hooks/UsePagination";
+
 export default function SingleItemDetails() {
   const { itemId } = useParams();
 
   const { isLoading, items } = useFetch(
     `http://localhost:5000/api/artworks/${itemId}`
   );
+
+  const { pageData } = usePagination(items, 10); // Assuming you want to display 10 related items per page
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -17,8 +22,15 @@ export default function SingleItemDetails() {
   return (
     <div>
       {/* Display item details */}
-      <h1>"hello"</h1> {/* Assuming id is a property of the item */}
+      <h1>"hello"</h1>
       {/* Other item details */}
+
+      {/* Display related items */}
+      <ul>
+        {pageData().map((relatedItem, index) => (
+          <li key={index}>"world</li>
+        ))}
+      </ul>
     </div>
   );
 }

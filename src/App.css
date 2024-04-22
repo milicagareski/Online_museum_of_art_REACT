@@ -687,3 +687,21 @@ form label h2 {
   text-transform: uppercase;
   text-align: center;
 }
+
+.buttons-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.buttons-pagination button {
+  margin: 2rem;
+}
+
+.buttons-pagination span {
+  font-size: 4rem;
+  color: var(--forth-color);
+  font-weight: bold;
+}

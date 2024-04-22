@@ -4,8 +4,7 @@ const useFetch = (url:string) => {
   const [isLoading, setIsLoading] = useState(true);
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
+  const fetchData = async () => {
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -20,6 +19,7 @@ const useFetch = (url:string) => {
       }
     };
 
+  useEffect(() => {
     fetchData();
   }, [url]);
 
