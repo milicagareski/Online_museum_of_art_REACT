@@ -1,40 +1,23 @@
-// SingleItemDetails.js
-import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import useFetch from "../../../hooks/UseFetch";
 export default function SingleItemDetails() {
-  const { itemId } = useParams(); // Get the item ID from the URL
-  const [item, setItem] = useState<any>(null);
+  const { itemId } = useParams();
 
-  useEffect(() => {
-    // Fetch data for the single item based on the item ID
-    const fetchItem = async () => {
-      try {
-        const response = await fetch(
-          `http://localhost:5000/api/artworks/${itemId}`
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch item data");
-        }
-        const singleItem = await response.json();
-        setItem(singleItem);
-        console.log(singleItem);
-      } catch (error) {
-        console.error("Error fetching item data:", error);
-      }
-    };
+  const { isLoading, items } = useFetch(
+    `http://localhost:5000/api/artworks/${itemId}`
+  );
 
-    fetchItem();
-  }, [itemId]);
-
-  if (!item) {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
+
+  // Assuming your item data is an object and not an array
+  const item = items[1]; // Assuming you are fetching a single item
 
   return (
     <div>
       {/* Display item details */}
-      <h1>{item.data.id}</h1>
+      <h1>"hello"</h1> {/* Assuming id is a property of the item */}
       {/* Other item details */}
     </div>
   );

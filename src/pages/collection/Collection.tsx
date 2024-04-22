@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import CollectionHeader from "./components/CollectionHeader";
 import SingleArt from "./components/SingleArt";
 import FilteredItems from "./components/FilteredItems";
+import useFetch from "../../hooks/UseFetch";
 
 export default function Collection() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [items, setItems] = useState<any>([]);
   const [collection, setCollection] = useState(
     "http://localhost:5000/api/artworks"
   );
+
+  const { isLoading, items } = useFetch(collection);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,25 +23,6 @@ export default function Collection() {
       setCollection(`http://localhost:5000/api/artworks/${value}`);
     }
   };
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(collection);
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
-      const allCollection = await response.json();
-      setItems(allCollection.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, [collection]);
 
   return (
     <>
