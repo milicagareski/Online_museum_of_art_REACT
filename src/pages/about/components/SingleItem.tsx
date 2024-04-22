@@ -16,7 +16,7 @@ export default function SingleItem({ singleItem }: SingleItemProps) {
 
   return (
     <li className="about-article" key={id}>
-      <h1>{title}</h1>
+      <h1 id="title-about">{title}</h1>
       <img src={image} alt={title} />
       <p>{showText ? info : info.slice(0, 200)}</p>
       <ShowHideTextButton

@@ -10,7 +10,7 @@ export default function AboutSlider() {
         <h1 id="about-title">{Images[currentIndex].name}</h1>
       </div>
       <div>
-        <img src={Images[currentIndex].image} alt="" />
+        <img src={Images[currentIndex].image} alt="" className="slider-img" />
         <div className="icons">
           <p
             onClick={() => {

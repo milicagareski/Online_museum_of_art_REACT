@@ -45,6 +45,7 @@ img {
   display: flex;
   flex-direction: column;
   margin-top: -5rem;
+  height: 40rem;
 }
 
 .container-header {
@@ -211,7 +212,7 @@ ul {
 }
 
 img {
-  width: 20rem;
+  width: 17rem;
   height: 15rem;
   border-radius: 50%;
   border: 4px solid var(--third-color);
@@ -354,6 +355,15 @@ footer p {
 .about-info,
 .visit-list {
   margin-right: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.about-info li,
+.visit-list li {
+  max-width: 18rem;
+  margin: 1rem;
 }
 
 .about-info h1 {
@@ -722,4 +732,21 @@ form label h2 {
 .technique,
 .desc {
   margin-top: -3rem;
+}
+@media screen and (min-width: 750px) {
+  .slider-img,
+  .home_slider img {
+    width: 22rem;
+    height: 20rem;
+  }
+  .about ul li {
+    margin: 1rem;
+  }
+
+  .visit-list li:last-child {
+    /* margin-top: -1.2rem; */
+  }
+  .visit-list li:last-child button {
+    margin-top: 2.3rem;
+  }
 }

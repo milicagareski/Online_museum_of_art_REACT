@@ -12,7 +12,7 @@ export interface GalleryItem {
 
 export type FetchResult = {
   isLoading: boolean;
-  items: GalleryItem | GalleryItem[]; // Allow for single object or array
+  items: GalleryItem | GalleryItem[]; 
   error?: Error | null;
 }
 

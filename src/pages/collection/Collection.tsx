@@ -4,7 +4,7 @@ import SingleArt from "./components/SingleArt";
 import FilteredItems from "./components/FilteredItems";
 import useFetch from "../../hooks/UseFetch";
 import usePagination from "../../hooks/UsePagination";
-import { GalleryItem } from "../../hooks/UseFetch"; // Import the GalleryItem type
+import { GalleryItem } from "../../hooks/UseFetch";
 
 export default function Collection() {
   const [collection, setCollection] = useState(
