@@ -1,6 +1,6 @@
 export default function AboutHeader() {
   return (
-    <article className=".container-header">
+    <article className="container-header">
       <h2>
         Join us to a world of art and culture from the comfort of your own home
       </h2>

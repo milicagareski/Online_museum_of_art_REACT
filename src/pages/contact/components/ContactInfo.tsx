@@ -33,30 +33,6 @@ export default function ContactInfo() {
           MON-SAT: 8:00 AM TO 5:00 PM
         </p>
       </article>
-      <h2>follow us</h2>
-      <article className="contact-ways social-icons">
-        <p>
-          <Link to="https://www.facebook.com/" className="link">
-            <span>
-              <i className="fa-brands fa-square-facebook"></i>
-            </span>
-          </Link>
-        </p>
-        <p>
-          <Link to="https://www.instagram.com/" className="link">
-            <span>
-              <i className="fa-brands fa-instagram"></i>
-            </span>
-          </Link>
-        </p>
-        <p>
-          <Link to="https://twitter.com/" className="link">
-            <span>
-              <i className="fa-brands fa-square-twitter"></i>
-            </span>
-          </Link>
-        </p>
-      </article>
     </section>
   );
 }

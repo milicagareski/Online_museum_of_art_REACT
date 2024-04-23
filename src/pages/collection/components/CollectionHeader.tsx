@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CollectionHeader() {
   return (
-    <article>
+    <article className="container-header">
       <h2>
         Welcome to Magnolia's online Gallery! A journey through creativity and
         expression
