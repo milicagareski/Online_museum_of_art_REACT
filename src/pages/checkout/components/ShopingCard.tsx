@@ -35,7 +35,7 @@ export default function ShopingCard() {
 
   return (
     <>
-      <form>
+      <form className="select-card">
         {buildings.map((building, index) => (
           <SingleCard
             key={building.id}

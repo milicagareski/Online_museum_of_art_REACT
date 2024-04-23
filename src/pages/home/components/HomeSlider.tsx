@@ -7,7 +7,9 @@ export default function HomeSlider() {
   return (
     <article className="home_slider">
       <div>
-        <h2 id="hidden">Enter a realm where imagination knows no limits</h2>
+        <h2 className="hidden">
+          Enter a realm where imagination knows no limits
+        </h2>
         <h2>join us for an unforgettable visit</h2>
       </div>
       <div>

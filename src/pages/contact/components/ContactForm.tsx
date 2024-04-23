@@ -36,7 +36,7 @@ export default function ContactForm(): React.ReactNode {
         </article>
       )}
       <section className="form">
-        <form>
+        <form className="form-contact">
           <label htmlFor="contact-email">What is your email?</label>
           <input
             type="email"

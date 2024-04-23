@@ -252,7 +252,7 @@ img {
   font-size: 4rem;
 }
 
-#hidden {
+.hidden {
   display: none;
 }
 /* Footer */
@@ -299,14 +299,26 @@ footer p {
 }
 
 .about ul,
-.collection ul {
+.collection ul,
+.visit-list,
+.select-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+.select-card {
+  align-items: center;
+  justify-content: center;
+}
+
+.select-card article {
+  margin: 1rem;
+}
+
 .about ul li,
-.collection ul li {
+.collection ul li .visit-list li,
+.select-card article {
   list-style-type: none;
   max-width: 18rem;
   overflow: hidden;
@@ -314,6 +326,13 @@ footer p {
 
 .about ul li {
   height: 60rem;
+}
+
+.visit-list li {
+  height: 75rem;
+}
+.visit-list li p {
+  /* height: 26rem; */
 }
 
 .collection ul li {
@@ -420,19 +439,19 @@ footer p {
 
 /* contact */
 
-form {
+.form-contact {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding-bottom: 1rem;
 }
 
-form label {
+.form-contact label {
   color: var(--forth-color);
   font-size: 2rem;
 }
 
-input {
+.form-contact input {
   font-size: 1.3rem;
   color: #343434;
   text-align: center;
@@ -478,7 +497,7 @@ textarea {
   text-transform: uppercase;
 }
 
-.form {
+.form-contact {
   padding-bottom: 2rem;
 }
 
@@ -591,7 +610,7 @@ textarea {
   text-align: center;
 }
 
-form {
+.form-contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -633,6 +652,7 @@ form label h2 {
 
 #payment {
   display: flex;
+  flex-direction: column;
   margin-bottom: 4rem;
 }
 
@@ -672,7 +692,7 @@ form label h2 {
 
 .collection ul {
   margin-right: 2.5rem;
-  /* margin-top: -3rem; */
+  margin-top: 6rem;
 }
 
 .collection ul img {
@@ -736,6 +756,9 @@ form label h2 {
   text-transform: uppercase;
   text-align: center;
 }
+#departments-button {
+  margin-top: 3rem;
+}
 
 .buttons-pagination {
   display: flex;
@@ -747,10 +770,11 @@ form label h2 {
 
 .buttons-pagination button {
   margin: 2rem;
+  font-size: 1rem;
 }
 
 .buttons-pagination span {
-  font-size: 4rem;
+  font-size: 2rem;
   color: var(--forth-color);
   font-weight: bold;
 }
@@ -773,10 +797,34 @@ form label h2 {
   margin-top: -3rem;
 }
 
+@media screen and (min-width: 370px) {
+  #offer-link {
+    max-width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  /* #ticket-link h4 {
+    max-width: 2rem;
+  } */
+}
+
 @media screen and (min-width: 640px) {
   .container-header,
-  .info-container {
+  .info-container,
+  #visit-info {
     max-width: 40rem;
+  }
+  #payment h2 {
+    font-size: 1.5rem;
+  }
+  #payment input {
+    font-size: 2rem;
+  }
+
+  .checkout-header h3 {
+    font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 750px) {
@@ -809,24 +857,66 @@ form label h2 {
   #follow {
     font-size: 3rem;
   }
-  .visit-list li:last-child button {
-    margin-top: 2.3rem;
+
+  .text {
+    font-size: 5rem;
+    line-height: 5.3rem;
+  }
+  .visit-list {
+    margin-top: 6rem;
   }
 }
 
 @media screen and (min-width: 950px) {
-  .form-and-info {
+  .form-and-info,
+  .offer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   .contact-info,
-  .form {
+  .form,
+  .offer-article {
     margin: 0 3rem;
   }
   .contact-info {
     margin-top: -1rem;
+  }
+  .showed {
+    display: none;
+  }
+  .hidden-offer {
+    display: block;
+  }
+  .text {
+    margin-top: 3rem;
+  }
+  .buttons-pagination button {
+    font-size: 2rem;
+  }
+
+  .buttons-pagination span {
+    font-size: 3rem;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+  .nav-links {
+    flex-direction: row;
+  }
+  .nav-links li {
+    /* max-width: 3rem; */
+    font-size: 1.5rem;
+    border: none;
+    margin: 0 0.1rem;
+    padding: 0 0.3rem;
+  }
+  #nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -843,8 +933,16 @@ form label h2 {
   }
   #welcome {
     margin-top: 2rem;
+    /* font-size: 4rem; */
   }
-  #hidden {
+  #welcome span {
+    font-size: 4rem;
+    color: var(--primary-color);
+  }
+  .home h3 {
+    font-size: 2rem;
+  }
+  .hidden {
     display: block;
   }
   .home_slider {
@@ -860,8 +958,13 @@ form label h2 {
     margin-left: 2rem;
   }
   .home_slider div {
-    /* max-width: 528px; */
-    /* margin-left: 10rem; */
-    /* margin: 0 5rem; */
+    margin: 0 2rem;
+  }
+  #nav-section {
+    padding: 0 6rem;
+  }
+  #nav-section li {
+    margin: 0 2rem;
+    height: 200px;
   }
 }

@@ -16,7 +16,9 @@ const Navbar = () => {
         <Title />
         <Button toggleBtn={toggleBtn} />
       </div>
-      <NavLinks showNav={showNav} toggleBtn={toggleBtn} />
+      <div>
+        <NavLinks showNav={showNav} toggleBtn={toggleBtn} />
+      </div>
     </section>
   );
 };

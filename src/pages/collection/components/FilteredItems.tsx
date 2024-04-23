@@ -15,7 +15,7 @@ export default function FilteredItems({ handleSubmit }: FilteredItemsProps) {
         <option value="Sculptures">SCULPTURES</option>
         <option value="Statues">STATUES</option>
       </select>
-      <button type="submit" className="btn">
+      <button type="submit" id="departments-button" className="btn">
         Submit
       </button>
     </form>
