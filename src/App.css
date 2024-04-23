@@ -197,7 +197,11 @@ ul {
   padding-bottom: 2rem;
   transition: var(--transition);
   overflow: hidden;
-  /* height: 820px; */
+  height: 580px;
+}
+
+.nav-laptop {
+  height: 100px;
 }
 
 /* Home page */
@@ -917,6 +921,16 @@ form label h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 80px;
+    display: block;
+  }
+  nav {
+    display: block;
+  }
+
+  .hide-nav {
+    display: block;
+    position: absolute;
   }
 }
 
