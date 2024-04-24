@@ -5,9 +5,10 @@ import { LinkData, NavLinksData } from "../../../data/data-links";
 interface NavLinksProps {
   showNav: boolean;
   toggleBtn: () => void;
+  setShowNav: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function NavLinks({ showNav, toggleBtn }: NavLinksProps) {
+function NavLinks({ showNav, toggleBtn, setShowNav }: NavLinksProps) {
   const linksContainerRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLUListElement>(null);
 
@@ -18,6 +19,10 @@ function NavLinks({ showNav, toggleBtn }: NavLinksProps) {
         linksContainerRef.current.style.height = `${linksHeight}px`;
       } else {
         linksContainerRef.current.style.height = "0px";
+      }
+
+      if (linksHeight < 100) {
+        setShowNav(false);
       }
     }
   }, [showNav]);
