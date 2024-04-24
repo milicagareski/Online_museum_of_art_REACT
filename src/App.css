@@ -349,7 +349,13 @@ footer p {
   height: 15rem;
   overflow: hidden;
 }
-
+.single-item-art h6 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.single-item-art h5 {
+  max-width: 772px;
+}
 .creation-year {
   height: 7rem;
 }
@@ -840,7 +846,8 @@ form label h2 {
 }
 @media screen and (min-width: 750px) {
   .slider-img,
-  .home_slider img {
+  .home_slider img,
+  .single-item-img {
     width: 22rem;
     height: 20rem;
   }
@@ -920,7 +927,6 @@ form label h2 {
     font-size: 1rem;
   }
   .nav-links li {
-    /* max-width: 3rem; */
     font-size: 1.2rem;
     border: none;
     margin: 0 0.1rem;
@@ -943,7 +949,6 @@ form label h2 {
 
   .hide-nav {
     display: block;
-    /* margin-left: 12rem; */
     transition: none;
   }
 
@@ -956,6 +961,14 @@ form label h2 {
   }
   .title {
     display: inline;
+  }
+  .art-details {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+  .art-item {
+    margin: 2rem;
   }
 }
 

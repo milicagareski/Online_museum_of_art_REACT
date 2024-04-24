@@ -15,28 +15,36 @@ export default function SingleItemDetails() {
   const item = Array.isArray(items) ? items[0] : items;
 
   return (
-    <section className="container">
-      <article>
-        <h6>TITLE:</h6>
-        <h5>{item.title}</h5>
-      </article>
-      <article className="art">
-        <h6>DID YOU KNOW:</h6>
-        <h5>{item.did_you_know}</h5>
-      </article>
-      <img src={item.images.web.url} alt={item.title} />
-      <article>
-        <h6>CREATION DATE:</h6>
-        <h5>{item.creation_date}</h5>
-      </article>
-      <article className="technique">
-        <h6>TECHNIQUE:</h6>
-        <h5>{item.technique}</h5>
-      </article>
-      <article className="desc">
-        <h6>DESCRIPTION:</h6>
-        <h5>{item.description}</h5>
-      </article>
+    <section className="container art-details">
+      <div className="art-item">
+        <article className="single-item-art">
+          <h6>TITLE:</h6>
+          <h5>{item.title}</h5>
+        </article>
+        <article className="art single-item-art">
+          <h6>DID YOU KNOW:</h6>
+          <h5>{item.did_you_know}</h5>
+        </article>
+        <img
+          className="single-item-img"
+          src={item.images.web.url}
+          alt={item.title}
+        />
+      </div>
+      <div className="art-item">
+        <article className="single-item-art">
+          <h6>CREATION DATE:</h6>
+          <h5>{item.creation_date}</h5>
+        </article>
+        <article className="technique single-item-art">
+          <h6>TECHNIQUE:</h6>
+          <h5>{item.technique}</h5>
+        </article>
+        <article className="desc single-item-art">
+          <h6>DESCRIPTION:</h6>
+          <h5>{item.description}</h5>
+        </article>
+      </div>
     </section>
   );
 }

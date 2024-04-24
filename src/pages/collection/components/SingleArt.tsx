@@ -8,14 +8,6 @@ export default function SingleArt({ item }: any) {
         <h6>TITLE:</h6>
         <h5>{item.title.slice(0, 30)}</h5>
       </article>
-      {/* {item.creators.map((element: any) => {
-        return (
-          <article className="collection-author">
-            <h6 className="author">AUTHOR:</h6>
-            <h5 className="author-desc">{element.description}</h5>
-          </article>
-        );
-      })} */}
       <article className="creation-year">
         <h6>CREATION YEAR:</h6>
         <h5>{item.creation_date}</h5>
