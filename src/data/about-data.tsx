@@ -11,7 +11,7 @@ export const aboutData = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTebtOvkDxLXCW07Uyt5mVjhj3V_7Je7s8FQQ&s",
     title: "About US:",
-    info: `Founded in 2015 Magnolia online museum is dedicated to showcasing the beauty and diversity of human creativity through its extensive collection of artworks. Over the years, we've curated a rich and varied collection, drawing from cultures and artistic movements spanning centuries.`,
+    info: `Founded in 2015 Magnolia online museum is dedicated to showcasing the beauty and diversity of human creativity through its extensive collection of artworks. Over the years, we've curated a rich and varied collection, drawing from cultures and artistic movements.`,
   },
   {
     id: 2,
@@ -32,6 +32,6 @@ export const aboutData = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLcdUtSZ0xVPpTEiAc8X7j36_pC92JrCRgeA&s",
     title: "Collections",
-    info: `In Magnolia we have diverse collections, which encompass a wide range of mediums, styles, and periods. From classical masterpieces to contemporary works, our collection showcases the breadth and depth of human artistic expression. Discover renowned artists alongside emerging talents, and delve into the stories behind each artwork.`,
+    info: `In Magnolia we have diverse collections, which encompass a wide range of mediums, styles, and periods. From classical masterpieces to contemporary works, our collection showcases the breadth and depth of human artistic expression.`,
   },
 ];

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import AboutItem from "./about.types";
-import { ShowHideTextButton } from "../../../hooks/ShowHideTextButton";
 
 interface SingleItemProps {
   singleItem: AboutItem;
@@ -15,14 +14,15 @@ export default function SingleItem({ singleItem }: SingleItemProps) {
   };
 
   return (
-    <li className="about-article" key={id}>
+    <li className={`about-article`} key={id}>
       <h1 id="title-about">{title}</h1>
       <img src={image} alt={title} />
-      <p>{showText ? info : info.slice(0, 200)}</p>
-      <ShowHideTextButton
-        toggleTextVisibility={toggleTextVisibility}
-        showText={showText}
-      />
+      <p className={!showText ? "text-long" : "text-short"}>
+        {showText ? info : info.slice(0, 200)}{" "}
+        <button className={`btn`} onClick={toggleTextVisibility}>
+          {!showText ? "Read more" : "Show-less"}
+        </button>
+      </p>
     </li>
   );
 }
