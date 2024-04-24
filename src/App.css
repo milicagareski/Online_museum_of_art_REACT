@@ -161,7 +161,6 @@ ul {
 }
 
 .nav-links li {
-  letter-spacing: 0.2rem;
   border-top: 1px solid;
   padding: 1.5rem;
   text-align: center;
@@ -190,7 +189,6 @@ ul {
 .hide-nav {
   display: none;
   transition: var(--transition);
-  /* overflow: hidden; */
 }
 
 .show-nav {
@@ -334,9 +332,6 @@ footer p {
 
 .visit-list li {
   height: 75rem;
-}
-.visit-list li p {
-  /* height: 26rem; */
 }
 
 .collection ul li {
@@ -914,7 +909,7 @@ form label h2 {
   }
   .nav-links li {
     /* max-width: 3rem; */
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: none;
     margin: 0 0.1rem;
     padding: 0 0.3rem;
@@ -930,11 +925,16 @@ form label h2 {
     display: block;
   }
 
+  nav ul {
+    margin-left: 10rem;
+  }
+
   .hide-nav {
     display: block;
-    margin-left: 12rem;
+    /* margin-left: 12rem; */
     transition: none;
   }
+
   .show-nav {
     display: block;
     transition: none;
@@ -1004,5 +1004,45 @@ form label h2 {
   }
   .show-nav {
     transition: none;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .nav-links {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+  .nav-links li {
+    /* max-width: 3rem; */
+    font-size: 1.5rem;
+    border: none;
+    margin: 0 0.1rem;
+    padding: 0 0.3rem;
+  }
+  #nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    display: block;
+  }
+  nav {
+    display: inline;
+  }
+
+  .hide-nav {
+    display: block;
+    transition: none;
+  }
+  .show-nav {
+    display: block;
+    transition: none;
+  }
+  nav {
+    margin-top: -5rem;
+  }
+  .title {
+    display: inline;
   }
 }
