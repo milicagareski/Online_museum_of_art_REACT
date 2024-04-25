@@ -25,13 +25,13 @@ export const aboutData = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQh5QVXiqR2n3yB4EC3gXJYPmMxLzVzCXeHQ&s",
     title: "Mission:",
-    info: `At Magnolia, our mission is to make art accessible to everyone, everywhere. We believe in the power of art to inspire, educate, and unite people across boundaries. Through our virtual platform, we strive to foster a global community of art lovers and enthusiasts.`,
+    info: `At Magnolia, our mission is to make art accessible to everyone, everywhere. We believe in the power of art to inspire, educate, and unite people across boundaries. Through virtual platform, we strive to foster a global community of art lovers and enthusiasts.`,
   },
   {
     id: 4,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLcdUtSZ0xVPpTEiAc8X7j36_pC92JrCRgeA&s",
-    title: "Collections",
+    title: "Collection",
     info: `In Magnolia we have diverse collections, which encompass a wide range of mediums, styles, and periods. From classical masterpieces to contemporary works, our collection showcases the breadth and depth of human artistic expression.`,
   },
 ];

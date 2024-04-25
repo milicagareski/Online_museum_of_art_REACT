@@ -1,13 +1,38 @@
 import AboutHeader from "./components/AboutHeader";
 import AboutInfo from "./components/AboutInfo";
 import AboutSlider from "./components/AboutSlider";
+import { createContext, useState } from "react";
+
+interface AboutContextType {
+  toggleTextVisibility: (itemId: number) => void;
+  showText: Record<number, boolean>;
+}
+
+export const AboutContext = createContext<AboutContextType | null>(null);
+
+const ContextInfo = () => {
+  const [showText, setShowText] = useState<Record<number, boolean>>({});
+
+  const toggleTextVisibility = (itemId: number) => {
+    setShowText((prevState) => ({
+      ...prevState,
+      [itemId]: !prevState[itemId],
+    }));
+  };
+
+  return (
+    <AboutContext.Provider value={{ toggleTextVisibility, showText }}>
+      <AboutInfo />
+    </AboutContext.Provider>
+  );
+};
 
 export default function About() {
   return (
     <section className="container about">
       <AboutHeader />
       <AboutSlider />
-      <AboutInfo />
+      <ContextInfo />
     </section>
   );
 }
