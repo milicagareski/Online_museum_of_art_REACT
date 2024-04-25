@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { buildings } from "../../data/data-visit";
+import { buildings } from "../../data/data-visit-museum";
 import SingleCard from "./SingleCard";
 import SubmitOrder from "./SubmitOrder";
 

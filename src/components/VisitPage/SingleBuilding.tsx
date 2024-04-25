@@ -1,4 +1,4 @@
-import { Building } from "../../data/data-visit";
+import { Building } from "../../data/data-visit-museum";
 import { Link } from "react-router-dom";
 
 interface BuildingProps {

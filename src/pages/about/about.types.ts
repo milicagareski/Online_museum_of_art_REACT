@@ -4,3 +4,8 @@ export default interface AboutItem {
   info: string;
   image: string;
 }
+
+export default interface AboutContextType {
+  toggleTextVisibility: (itemId: number) => void;
+  showText: Record<number, boolean>;
+}

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import SingleLink from "./SingleLink";
-import { LinkData, NavLinksData } from "../../data/data-links";
+import { LinkData, NavLinksData } from "../../data/data-nav-links";
 
 interface NavLinksProps {
   showNav: boolean;

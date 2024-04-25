@@ -1,4 +1,4 @@
-import { aboutData } from "../../data/about-data";
+import { aboutData } from "../../data/data-about-info";
 import SingleItem from "./SingleItem";
 import AboutItem from "../../pages/about/about.types";
 export default function AboutInfo() {
