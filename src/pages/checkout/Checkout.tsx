@@ -1,5 +1,5 @@
-import CheckoutHeader from "./components/CheckoutHeader";
-import ShopingCard from "./components/ShopingCard";
+import CheckoutHeader from "../../components/Checkout/CheckoutHeader";
+import ShopingCard from "../../components/Checkout/ShopingCard";
 
 export default function Checkout() {
   return (

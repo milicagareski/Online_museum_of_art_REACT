@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import AboutItem from "./about.types";
-import { AboutContext } from "../About";
+import AboutItem from "../../pages/about/about.types";
+import { AboutContext } from "../../pages/about/About";
 
 interface SingleItemProps {
   singleItem: AboutItem;

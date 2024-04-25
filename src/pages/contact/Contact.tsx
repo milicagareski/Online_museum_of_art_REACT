@@ -1,8 +1,7 @@
-import React from "react";
-import ContactHeader from "./components/ContactHeader";
-import ContactForm from "./components/ContactForm";
-import ContactInfo from "./components/ContactInfo";
-import ContactSocial from "./components/ContactSocial";
+import ContactHeader from "../../components/Contact/ContactHeader";
+import ContactForm from "../../components/Contact/ContactForm";
+import ContactInfo from "../../components/Contact/ContactInfo";
+import ContactSocial from "../../components/Contact/ContactSocial";
 
 export default function Contact() {
   return (

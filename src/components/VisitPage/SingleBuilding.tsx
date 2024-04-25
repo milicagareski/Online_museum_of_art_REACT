@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Building } from "../../../data/data-visit";
+import { Building } from "../../data/data-visit";
 import { Link } from "react-router-dom";
 
 interface BuildingProps {

@@ -10,7 +10,7 @@ import Checkout from "./pages/checkout";
 import Error from "../src/pages/error";
 import Footer from "./pages/footer";
 import Visit from "./pages/visit/Visit";
-import SingleItemDetails from "./pages/collection/components/SingleItemDetails";
+import SingleItemDetails from "./components/Collection/SingleItemDetails";
 
 function App() {
   return (

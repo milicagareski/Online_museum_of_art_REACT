@@ -1,4 +1,4 @@
-import logo from "../../../data/magnolia.png";
+import logo from "../../data/magnolia.png";
 export default function Title(): JSX.Element {
   return (
     <section className="title">

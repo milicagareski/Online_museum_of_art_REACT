@@ -1,6 +1,6 @@
-import HomeHeader from "./components/HomeHeader";
-import HomeSlider from "./components/HomeSlider";
-import BuyTicket from "./components/BuyTicket";
+import HomeHeader from "../../components/Home/HomeHeader";
+import HomeSlider from "../../components/Home/HomeSlider";
+import BuyTicket from "../../components/Home/BuyTicket";
 
 export default function Home() {
   return (

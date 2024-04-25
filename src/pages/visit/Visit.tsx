@@ -1,6 +1,6 @@
-import VisitHeader from "./components/VisitHeader";
-import VisitBuildings from "./components/VisitBuildings";
-import SpecialOffer from "./components/SpecialOffer";
+import VisitHeader from "../../components/VisitPage/VisitHeader";
+import VisitBuildings from "../../components/VisitPage/VisitBuildings";
+import SpecialOffer from "../../components/VisitPage/SpecialOffer";
 
 export default function Visit() {
   return (

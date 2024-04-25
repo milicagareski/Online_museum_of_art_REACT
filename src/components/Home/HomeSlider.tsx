@@ -1,5 +1,5 @@
 import { useSlider } from "./Slider";
-import { Images, Image } from "../../../data/data";
+import { Images, Image } from "../../data/data";
 
 export default function HomeSlider() {
   const currentIndex = useSlider<Image>(Images);

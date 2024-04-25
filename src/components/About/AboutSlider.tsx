@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Images } from "../../../data/data";
+import { Images } from "../../data/data";
 
 export default function AboutSlider() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);

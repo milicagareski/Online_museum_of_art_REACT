@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LinkData } from "../../../data/data-links";
+import { LinkData } from "../../data/data-links";
 
 interface SingleLinkProps {
   singleLink: LinkData;

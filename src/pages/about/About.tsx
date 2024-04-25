@@ -1,6 +1,6 @@
-import AboutHeader from "./components/AboutHeader";
-import AboutInfo from "./components/AboutInfo";
-import AboutSlider from "./components/AboutSlider";
+import AboutHeader from "../../components/About/AboutHeader";
+import AboutInfo from "../../components/About/AboutInfo";
+import AboutSlider from "../../components/About/AboutSlider";
 import { createContext, useState } from "react";
 
 interface AboutContextType {

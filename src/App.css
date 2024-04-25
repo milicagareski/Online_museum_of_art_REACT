@@ -132,10 +132,6 @@ a {
   background-color: transparent;
 }
 
-/* input {
-  font-size: 1.6rem;
-} */
-
 .nav-btn {
   font-size: 2.2rem;
   color: var(--primary-color);
@@ -193,7 +189,6 @@ ul {
 
 .show-nav {
   padding-bottom: 2rem;
-  /* transition: var(--transition); */
   overflow: hidden;
   height: 580px;
 }
@@ -544,8 +539,6 @@ textarea {
 }
 
 .container-offer {
-  /* width: 100%; */
-  /* min-height: 100vh; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -557,7 +550,6 @@ textarea {
 }
 .text {
   font-weight: 600;
-  /* font-size: 70px; */
   font-size: 3rem;
   line-height: 65px;
   letter-spacing: 10px;
@@ -828,9 +820,6 @@ form label h2 {
     align-items: center;
     margin: 0 auto;
   }
-  /* #ticket-link h4 {
-    max-width: 2rem;
-  } */
 }
 
 @media screen and (min-width: 640px) {
@@ -991,7 +980,6 @@ form label h2 {
   }
   #welcome {
     margin-top: 2rem;
-    /* font-size: 4rem; */
   }
   #welcome span {
     font-size: 4rem;
@@ -1046,7 +1034,6 @@ form label h2 {
     font-size: 1rem;
   }
   .nav-links li {
-    /* max-width: 3rem; */
     font-size: 1.5rem;
     border: none;
     margin: 0 0.1rem;

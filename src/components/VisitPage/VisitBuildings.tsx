@@ -1,4 +1,4 @@
-import { Building, buildings } from "../../../data/data-visit";
+import { Building, buildings } from "../../data/data-visit";
 import SingleBuilding from "./SingleBuilding";
 
 export default function VisitBuildings() {

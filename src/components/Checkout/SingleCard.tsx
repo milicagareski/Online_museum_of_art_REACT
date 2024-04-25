@@ -1,4 +1,4 @@
-import { Building } from "../../../data/data-visit";
+import { Building } from "../../data/data-visit";
 
 interface SingleCardProps {
   building: Building;

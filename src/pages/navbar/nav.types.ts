@@ -1,4 +1,4 @@
-import { LinkData } from "../../../data/data-links";
+import { LinkData } from "../../data/data-links";
 export interface NavbarProps {
   toggleBtn: () => void;
   showNav: boolean;

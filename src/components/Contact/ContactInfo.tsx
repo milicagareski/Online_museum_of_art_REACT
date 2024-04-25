@@ -1,5 +1,5 @@
 import React from "react";
-import Location from "../../home/components/location";
+import Location from "../Home/location";
 import { Link } from "react-router-dom";
 
 export default function ContactInfo() {

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Title from "./components/Title";
-import NavLinks from "./components/NavLinks";
-import Button from "./components/Button";
+import Title from "../../components/Navbar/Title";
+import NavLinks from "../../components/Navbar/NavLinks";
+import Button from "../../components/Navbar/Button";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState<boolean>(false);

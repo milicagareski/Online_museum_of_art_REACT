@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import CollectionHeader from "./components/CollectionHeader";
-import SingleArt from "./components/SingleArt";
-import FilteredItems from "./components/FilteredItems";
+import CollectionHeader from "../../components/Collection/CollectionHeader";
+import SingleArt from "../../components/Collection/SingleArt";
+import FilteredItems from "../../components/Collection/FilteredItems";
 import useFetch from "../../hooks/UseFetch";
 import usePagination from "../../hooks/UsePagination";
 import { GalleryItem } from "../../hooks/UseFetch";
