@@ -1012,7 +1012,7 @@ form label h2 {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
   #nav-section {
     padding: 0 6rem;
   }
