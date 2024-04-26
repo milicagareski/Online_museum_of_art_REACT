@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { SingleArtProps } from "../../pages/collection/collection-types";
 
-export default function SingleArt({ item }: any) {
+export default function SingleArt({ item }: SingleArtProps) {
   return (
     <li key={item.id}>
       <article className="collection-title">

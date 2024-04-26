@@ -1,8 +1,4 @@
-import React from "react";
-
-interface FilteredItemsProps {
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-}
+import { FilteredItemsProps } from "../../pages/collection/collection-types";
 
 export default function FilteredItems({ handleSubmit }: FilteredItemsProps) {
   return (

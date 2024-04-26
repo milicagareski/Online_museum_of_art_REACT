@@ -1,10 +1,6 @@
 import { useContext } from "react";
-import AboutItem from "../../pages/about/about.types";
 import { AboutContext } from "../../pages/about/About";
-
-interface SingleItemProps {
-  singleItem: AboutItem;
-}
+import { SingleItemProps } from "../../pages/about/about-types";
 
 export default function SingleItem({ singleItem }: SingleItemProps) {
   const { id, title, info, image } = singleItem;

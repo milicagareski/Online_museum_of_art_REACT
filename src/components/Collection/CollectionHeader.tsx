@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function CollectionHeader() {
   return (
     <article className="container-header">

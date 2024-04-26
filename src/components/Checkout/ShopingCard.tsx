@@ -5,14 +5,14 @@ import SubmitOrder from "./SubmitOrder";
 
 export default function ShopingCard() {
   const [total, setTotal] = useState<number>(0);
-  const [payment, setPayment] = useState(false);
-  const [submitOrder, setSubmitOrder] = useState(false);
+  const [payment, setPayment] = useState<boolean>(false);
+  const [submitOrder, setSubmitOrder] = useState<boolean>(false);
 
   const [buildingInputs, setBuildingInputs] = useState<number[]>(
     buildings.map(() => 0)
   );
 
-  const setInput = (index: number, value: number) => {
+  const setInput = (index: number, value: number): void => {
     const newInputs = [...buildingInputs];
     newInputs[index] = value;
     if (value < 0) {

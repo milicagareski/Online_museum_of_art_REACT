@@ -1,11 +1,4 @@
-import { Building } from "../../data/data-visit-museum";
-
-interface SingleCardProps {
-  building: Building;
-  index: number;
-  buildingInputs: number[];
-  setInput: (index: number, value: number) => unknown;
-}
+import { SingleCardProps } from "../../pages/checkout/checkout-types";
 
 export default function SingleCard(props: SingleCardProps) {
   const { building, index, buildingInputs, setInput } = props;

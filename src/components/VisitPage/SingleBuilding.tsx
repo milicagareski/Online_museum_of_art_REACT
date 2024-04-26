@@ -1,9 +1,5 @@
-import { Building } from "../../data/data-visit-museum";
 import { Link } from "react-router-dom";
-
-interface BuildingProps {
-  building: Building;
-}
+import { BuildingProps } from "../../pages/visit/visit-types";
 
 export default function SingleBuilding({ building }: BuildingProps) {
   const { id, title, image, info, price } = building;

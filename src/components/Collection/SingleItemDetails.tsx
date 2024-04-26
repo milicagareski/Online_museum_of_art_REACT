@@ -1,15 +1,27 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/UseFetch";
+import { Link } from "react-router-dom";
 
 export default function SingleItemDetails() {
   const { itemId } = useParams();
 
-  const { isLoading, items } = useFetch(
+  const { isLoading, items, isError } = useFetch(
     `http://localhost:5000/api/artworks/${itemId}`
   );
 
   if (isLoading) {
     return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return (
+      <>
+        <h1>The page do not exist</h1>
+        <button className="btn">
+          <Link to="/">back to home</Link>
+        </button>
+      </>
+    );
   }
 
   const item = Array.isArray(items) ? items[0] : items;

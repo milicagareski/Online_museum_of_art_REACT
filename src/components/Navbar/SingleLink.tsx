@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
-import { LinkData } from "../../data/data-nav-links";
-
-interface SingleLinkProps {
-  singleLink: LinkData;
-  toggleBtn: () => void;
-}
+import { SingleLinkProps } from "../../pages/navbar/nav-types";
 
 function SingleLink({ singleLink, toggleBtn }: SingleLinkProps) {
   const { id, url, title } = singleLink;

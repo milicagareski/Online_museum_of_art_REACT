@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 
 export interface GalleryItem {
-  id: any;
-  title: any;
-  did_you_know: any;
+  id: number;
+  title: string;
+  did_you_know: string;
   images: any;
   creation_date: any;
-  technique: any;
-  description: any;
+  technique: string;
+  description: string;
 }
 
 export type FetchResult = {

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function SpecialOffer() {
@@ -25,11 +24,6 @@ export default function SpecialOffer() {
           </Link>
         </article>
       </div>
-      {/* <p id="visit-info">
-        Explore the rich tapestry of history across our three museum buildings.
-        Delve into the exquisite beauty of artistic treasures, each steeped in
-        centuries-old stories waiting to be discovered.
-      </p> */}
     </section>
   );
 }

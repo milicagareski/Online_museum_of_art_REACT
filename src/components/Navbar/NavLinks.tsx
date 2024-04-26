@@ -1,12 +1,7 @@
 import { useEffect, useRef } from "react";
 import SingleLink from "./SingleLink";
 import { LinkData, NavLinksData } from "../../data/data-nav-links";
-
-interface NavLinksProps {
-  showNav: boolean;
-  toggleBtn: () => void;
-  setShowNav: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { NavLinksProps } from "../../pages/navbar/nav-types";
 
 function NavLinks({ showNav, toggleBtn, setShowNav }: NavLinksProps) {
   const linksContainerRef = useRef<HTMLDivElement>(null);

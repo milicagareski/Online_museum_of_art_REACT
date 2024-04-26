@@ -1,6 +1,3 @@
-import React from "react";
-import SpecialOffer from "./SpecialOffer";
-
 export default function VisitHeader() {
   return (
     <section className="visit-title container-header">

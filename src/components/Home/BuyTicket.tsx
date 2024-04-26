@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Location from "./location";
+import Location from "./Location";
 
 function BuyTicket() {
   return (

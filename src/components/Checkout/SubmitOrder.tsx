@@ -1,16 +1,11 @@
 import { useState } from "react";
-
-interface SingleOrderProps {
-  payment: boolean;
-  submitOrder: boolean;
-  setSubmitOrder: (value: boolean) => void;
-}
+import { SingleOrderProps } from "../../pages/checkout/checkout-types";
 
 export default function SubmitOrder(props: SingleOrderProps) {
   const { payment, submitOrder, setSubmitOrder } = props;
   const [creditCard, setCreditCard] = useState("");
   const [sequrutyNum, setSequrutyNum] = useState("");
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (creditCard && sequrutyNum) {
       setSubmitOrder(true);
@@ -34,7 +29,7 @@ export default function SubmitOrder(props: SingleOrderProps) {
             </article>
           )}
           <article>
-            <form id="payment">
+            <form id="payment" onSubmit={handleSubmit}>
               <label htmlFor="credit-card">
                 <h2>Enter Credit Card Number</h2>
                 <input
@@ -62,9 +57,7 @@ export default function SubmitOrder(props: SingleOrderProps) {
                 />
               </label>
 
-              <button className="btn submit-btn" onClick={handleSubmit}>
-                submit order
-              </button>
+              <button className="btn submit-btn">submit order</button>
             </form>
           </article>
         </>

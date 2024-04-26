@@ -5,12 +5,13 @@ import FilteredItems from "../../components/Collection/FilteredItems";
 import useFetch from "../../hooks/UseFetch";
 import usePagination from "../../hooks/UsePagination";
 import { GalleryItem } from "../../hooks/UseFetch";
+import { Link } from "react-router-dom";
 
 export default function Collection() {
   const [collection, setCollection] = useState(
     "http://localhost:5000/api/artworks"
   );
-  const { isLoading, items } = useFetch(collection);
+  const { isLoading, items, isError } = useFetch(collection);
   const { pageNumber, pageCount, changePage, pageData } = usePagination(
     Array.isArray(items) ? items : [items], // Ensure items is an array
     20
@@ -36,6 +37,17 @@ export default function Collection() {
     const nextPage = pageNumber + 1;
     changePage(nextPage);
   };
+
+  if (isError) {
+    return (
+      <>
+        <h1>The page do not exist</h1>
+        <button className="btn">
+          <Link to="/">back to home</Link>
+        </button>
+      </>
+    );
+  }
 
   return (
     <>

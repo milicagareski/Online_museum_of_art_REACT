@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function ContactForm(): React.ReactNode {
+export default function ContactForm() {
   const [successMessage, setSuccessMessage] = useState(false);
   const [email, setEmail] = useState("");
   const [question, setQuestion] = useState("");
-  const [finalMessage, setFinalMessage] = useState(false);
+  const [finalMessage, setFinalMessage] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,7 +39,7 @@ export default function ContactForm(): React.ReactNode {
           )}
         </section>
         <section className="form">
-          <form className="form-contact">
+          <form className="form-contact" onSubmit={handleSubmit}>
             <label htmlFor="contact-email">What is your email?</label>
             <input
               type="email"
@@ -65,7 +65,7 @@ export default function ContactForm(): React.ReactNode {
               }}
             ></textarea>
           </form>
-          <button className="btn" type="submit" onClick={handleSubmit}>
+          <button className="btn" type="submit">
             submit
           </button>
         </section>
