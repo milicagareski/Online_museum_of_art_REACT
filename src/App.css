@@ -208,6 +208,30 @@ ul {
   letter-spacing: var(--letter-spacing);
 }
 
+.home_slider h2,
+.home h2,
+.about .container-header h2,
+.collection .container-header h2,
+.contact h2,
+.visit-title h2,
+.checkout-header h2 {
+  color: var(--forth-color);
+}
+
+.hidden-offer h3,
+.form-and-info h2,
+.checkout-header h3 {
+  color: var(--primary-color);
+}
+
+#follow {
+  color: var(--forth-color);
+}
+
+.home h3 {
+  color: var(--primary-color);
+}
+
 img {
   width: 15rem;
   height: 15rem;
@@ -987,7 +1011,6 @@ form label h2 {
   }
   #welcome span {
     font-size: 4rem;
-    color: var(--primary-color);
   }
   .home h3 {
     font-size: 2rem;
