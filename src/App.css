@@ -1010,6 +1010,9 @@ form label h2 {
   .home_slider div {
     margin: 0 2rem;
   }
+}
+
+@media screen and (min-width: 1200px) {
   #nav-section {
     padding: 0 6rem;
   }
