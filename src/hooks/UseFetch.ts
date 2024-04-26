@@ -5,7 +5,7 @@ export interface GalleryItem {
   title: string;
   did_you_know: string;
   images: any;
-  creation_date: any;
+  creation_date: string;
   technique: string;
   description: string;
 }
