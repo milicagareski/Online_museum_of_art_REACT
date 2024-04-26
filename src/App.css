@@ -925,14 +925,18 @@ form label h2 {
     font-size: 1.2rem;
     border: none;
     margin: 0 0.1rem;
-    padding: 0 0.3rem;
+    padding: 1rem;
   }
   #nav-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     display: block;
+  }
+  .title {
+    position: relative;
+    top: 1rem;
   }
   nav {
     display: block;
@@ -1011,7 +1015,6 @@ form label h2 {
   }
   #nav-section li {
     margin: 0 2rem;
-    padding: 0;
   }
   .title {
     display: inline;
@@ -1032,18 +1035,19 @@ form label h2 {
     flex-direction: row;
     justify-content: space-between;
     font-size: 1rem;
+    margin-left: 1rem;
   }
   .nav-links li {
     font-size: 1.5rem;
     border: none;
-    margin: 0 0.1rem;
-    padding: 0 0.3rem;
+    margin-top: -0.5rem;
+    padding: 1rem;
   }
   #nav-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     display: block;
   }
   nav {

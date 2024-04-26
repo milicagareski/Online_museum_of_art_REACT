@@ -19,10 +19,7 @@ export default function SingleItem({ singleItem }: SingleItemProps) {
       <img src={image} alt={title} />
       <p className={!showText[id] ? "text-long" : "text-short"}>
         {showText[id] ? info : info.slice(0, 200)}{" "}
-        <button
-          className={`btn about-btn`}
-          onClick={() => toggleTextVisibility(id)}
-        >
+        <button className={`btn`} onClick={() => toggleTextVisibility(id)}>
           {!showText[id] ? "Read more" : "Show less"}
         </button>
       </p>

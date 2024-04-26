@@ -64,10 +64,10 @@ export default function ContactForm() {
                 setQuestion(e.target.value);
               }}
             ></textarea>
+            <button className="btn" type="submit">
+              submit
+            </button>
           </form>
-          <button className="btn" type="submit">
-            submit
-          </button>
         </section>
       </section>
     </>
