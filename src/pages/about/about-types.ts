@@ -9,3 +9,8 @@ export default interface AboutItem {
 export interface SingleItemProps {
   singleItem: AboutItem;
 }
+
+export interface AboutContextType {
+  toggleTextVisibility: (itemId: number) => void;
+  showText: Record<number, boolean>;
+}

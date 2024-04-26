@@ -1,4 +1,4 @@
-import { useSlider } from "./Slider";
+import { useSlider } from "../../hooks/useSlider";
 import { Images, Image } from "../../data/data-slider";
 
 export default function HomeSlider() {

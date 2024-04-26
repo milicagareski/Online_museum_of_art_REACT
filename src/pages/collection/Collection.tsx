@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function Collection() {
   const [collection, setCollection] = useState(
-    "http://localhost:5000/api/artworks"
+    "https://backend-online-museum-of-art-react.onrender.com/api/artworks"
   );
   const { isLoading, items, isError } = useFetch(collection);
   const { pageNumber, pageCount, changePage, pageData } = usePagination(
@@ -23,9 +23,13 @@ export default function Collection() {
       e.currentTarget.elements.namedItem("departments") as HTMLSelectElement
     )?.value.toLowerCase();
     if (value === "collection") {
-      setCollection("http://localhost:5000/api/artworks");
+      setCollection(
+        "https://backend-online-museum-of-art-react.onrender.com/api/artworks"
+      );
     } else {
-      setCollection(`http://localhost:5000/api/artworks/${value}`);
+      setCollection(
+        `https://backend-online-museum-of-art-react.onrender.com/api/artworks/${value}`
+      );
     }
   };
 

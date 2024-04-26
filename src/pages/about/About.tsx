@@ -2,11 +2,7 @@ import AboutHeader from "../../components/About/AboutHeader";
 import AboutInfo from "../../components/About/AboutInfo";
 import AboutSlider from "../../components/About/AboutSlider";
 import { createContext, useState } from "react";
-
-interface AboutContextType {
-  toggleTextVisibility: (itemId: number) => void;
-  showText: Record<number, boolean>;
-}
+import { AboutContextType } from "./about-types";
 
 export const AboutContext = createContext<AboutContextType | null>(null);
 
