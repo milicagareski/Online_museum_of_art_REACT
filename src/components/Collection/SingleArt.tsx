@@ -15,7 +15,7 @@ export default function SingleArt({ item }: SingleArtProps) {
       <img src={item.images.web.url} alt={item.title} />
       <article className="decrtiption">
         <h6>WANT TO KNOW MORE?</h6>
-        <Link to={`/collection/${item.id}`} target="_blank">
+        <Link to={`/collection/${item.id}`}>
           <button className="btn">READ HERE</button>
         </Link>
       </article>
