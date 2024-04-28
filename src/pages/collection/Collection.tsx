@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 
 export default function Collection() {
   const [collection, setCollection] = useState(
-    "https://backend-online-museum-of-art-react.onrender.com/api/artworks"
+    "http://localhost:5000/api/artworks"
   );
   const { isLoading, items, isError } = useFetch(collection);
   const { pageNumber, pageCount, changePage, pageData } = usePagination(
-    Array.isArray(items) ? items : [items], // Ensure items is an array
+    Array.isArray(items) ? items : [items],
     20
   );
 
@@ -27,9 +27,7 @@ export default function Collection() {
         "https://backend-online-museum-of-art-react.onrender.com/api/artworks"
       );
     } else {
-      setCollection(
-        `https://backend-online-museum-of-art-react.onrender.com/api/artworks/${value}`
-      );
+      setCollection(`http://localhost:5000/api/artworks/${value}`);
     }
   };
 

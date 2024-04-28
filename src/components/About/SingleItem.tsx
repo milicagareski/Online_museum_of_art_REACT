@@ -5,6 +5,7 @@ import { SingleItemProps } from "../../pages/about/about-types";
 export default function SingleItem({ singleItem }: SingleItemProps) {
   const { id, title, info, image } = singleItem;
   const context = useContext(AboutContext);
+
   console.log(context);
 
   if (!context) {

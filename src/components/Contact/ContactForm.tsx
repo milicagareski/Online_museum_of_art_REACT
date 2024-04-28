@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 export default function ContactForm() {
-  const [successMessage, setSuccessMessage] = useState(false);
-  const [email, setEmail] = useState("");
-  const [question, setQuestion] = useState("");
-  const [finalMessage, setFinalMessage] = useState<boolean>(false);
+  const [successMessage, setSuccessMessage] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("");
+  const [question, setQuestion] = useState<string>("");
+  // const [finalMessage, setFinalMessage] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,11 +15,6 @@ export default function ContactForm() {
       }, 4000);
       setEmail("");
       setQuestion("");
-    } else {
-      setFinalMessage(true);
-      setTimeout(() => {
-        setFinalMessage(false);
-      }, 4000);
     }
   };
 
@@ -30,11 +25,6 @@ export default function ContactForm() {
           {successMessage && (
             <article id="form-success">
               <p style={{ color: "green" }}>Thank you for the message</p>
-            </article>
-          )}
-          {finalMessage && (
-            <article id="form-success">
-              <p style={{ color: "red" }}>Provide bellow your name and email</p>
             </article>
           )}
         </section>
