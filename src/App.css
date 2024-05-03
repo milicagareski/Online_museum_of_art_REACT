@@ -446,9 +446,13 @@ footer p {
   color: var(--primary-color);
   letter-spacing: var(--letter-spacing);
 }
-
+.about-btn {
+  font-size: 1rem;
+}
 .btn {
   font-size: 2rem;
+}
+.btn, .about-btn {
   background-color: transparent;
   border: 2px solid var(--forth-color);
   text-transform: uppercase;
@@ -456,7 +460,7 @@ footer p {
   transition: var(--transition);
 }
 
-.btn:hover {
+.btn:hover, .about-btn:hover {
   color: var(--third-color);
   background-color: var(--forth-color);
   border-color: var(--third-color);

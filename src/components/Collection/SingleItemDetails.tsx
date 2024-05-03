@@ -3,10 +3,10 @@ import useFetch from "../../hooks/UseFetch";
 import { Link } from "react-router-dom";
 
 export default function SingleItemDetails() {
-  const { itemId } = useParams();
+  const { itemId } = useParams<any>();
 
   const { isLoading, items, isError } = useFetch(
-    `http://localhost:5000/api/artworks/${itemId}`
+    `https://backend-online-museum-of-art-react.onrender.com/api/artworks/${itemId}`
   );
 
   if (isLoading) {
