@@ -10,6 +10,7 @@ import Checkout from "./pages/checkout";
 import Error from "../src/pages/error";
 import Footer from "./pages/footer";
 import Visit from "./pages/visit/Visit";
+import Virtual_tour from "./pages/virtual_tour/Virtual_tour";
 import SingleItemDetails from "./components/Collection/SingleItemDetails";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/visit" element={<Visit />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/virtual_tour" element={<Virtual_tour />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </section>

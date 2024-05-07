@@ -11,4 +11,5 @@ export const NavLinksData = [
   { id: 4, url: "/contact", title: "Contact" },
   { id: 5, url: "/visit", title: "Visit" },
   { id: 6, url: "/checkout", title: "Checkout" },
+  { id: 7, url: "/virtual_tour", title: "Virtual_Tour" },
 ];

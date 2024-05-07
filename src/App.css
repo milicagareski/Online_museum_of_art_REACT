@@ -341,7 +341,7 @@ footer p {
 .collection ul li .visit-list li,
 .select-card article {
   list-style-type: none;
-  max-width: 18rem;
+  max-width: 17rem;
   overflow: hidden;
   margin: 1rem;
 }
@@ -952,8 +952,11 @@ form label h2 {
   .nav-links li {
     font-size: 1.2rem;
     border: none;
-    margin: 0 0.1rem;
-    padding: 1rem;
+    margin: 0 1rem;
+    padding: 1rem 0;
+  }
+  .nav-links li:last-child {
+    margin-left: 1rem;
   }
   #nav-section {
     display: flex;
