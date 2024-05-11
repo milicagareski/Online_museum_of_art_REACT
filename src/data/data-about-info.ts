@@ -1,9 +1,3 @@
-// export interface DataAboutPage {
-//   id: number;
-//   image: string;
-//   title: string;
-//   info: string;
-// }
 
 export const aboutData = [
   {
