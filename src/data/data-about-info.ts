@@ -11,7 +11,7 @@ export const aboutData = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTebtOvkDxLXCW07Uyt5mVjhj3V_7Je7s8FQQ&s",
     title: "About US",
-    info: `Founded in 2015 Magnolia online museum is dedicated to showcasing the beauty and diversity of human creativity through its extensive collection of artworks. Over the years, we've curated a rich and varied collection, drawing from cultures and artistic movements.`,
+    info: `Founded in 2015 Magnolia online museum is dedicated to showcasing the beauty and diversity of human creativity through its extensive collection of artworks. Over the years, we've curated a rich and varied collection, drawing from artistic movements.`,
   },
   {
     id: 2,

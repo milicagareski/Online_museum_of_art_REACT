@@ -328,6 +328,10 @@ footer p {
   flex-wrap: wrap;
 }
 
+.about ul {
+  margin-top: 7rem;
+}
+
 .select-card {
   align-items: center;
   justify-content: center;
@@ -425,6 +429,7 @@ footer p {
 .info-container {
   margin-top: -4rem;
   color: var(--forth-color);
+  padding-bottom: 5rem;
 }
 
 .about-info,
@@ -936,6 +941,10 @@ form label h2 {
     height: 560px;
     margin-top: 6rem;
 
+  }
+
+  .about ul {
+    margin-top: 10rem;
   }
 }
 

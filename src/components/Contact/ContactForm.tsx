@@ -1,10 +1,7 @@
-import { useState } from "react";
+import ContactFormProps from "../../pages/contact/contact.types";
 
-export default function ContactForm() {
-  const [successMessage, setSuccessMessage] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
-  const [question, setQuestion] = useState<string>("");
-  // const [finalMessage, setFinalMessage] = useState<boolean>(false);
+export default function ContactForm({successMessage, setSuccessMessage, email, setEmail, 
+  question, setQuestion}: ContactFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

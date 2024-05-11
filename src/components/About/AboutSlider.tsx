@@ -1,8 +1,17 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { AboutContext } from "../../pages/about/About";
+import { AboutContextType } from "../../pages/about/about-types";
+
 import { Images } from "../../data/data-slider";
 
 export default function AboutSlider() {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const context = useContext(AboutContext);
+
+  if (!context) {
+    throw new Error("Context must be provided");
+  }
+
+  const { currentIndex, setCurrentIndex } = context as AboutContextType;
 
   return (
     <article className="img-container">
