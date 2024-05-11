@@ -201,7 +201,7 @@ ul {
 
 #welcome,
 #explore,
-#collection {
+#collection, #virtual {
   font-size: 3rem;
   color: var(--third-color);
   margin-top: -1rem;
@@ -322,7 +322,7 @@ footer p {
 .about ul,
 .collection ul,
 .visit-list,
-.select-card {
+.select-card, .virtual ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -339,14 +339,14 @@ footer p {
 
 .about ul li,
 .collection ul li .visit-list li,
-.select-card article {
+.select-card article, .virtual ul li {
   list-style-type: none;
   max-width: 17rem;
   overflow: hidden;
   margin: 1rem;
 }
 
-.about li {
+.about li, .virtual li {
   height: 62rem;
   overflow: hidden;
 }
@@ -743,7 +743,7 @@ form label h2 {
 
 .collection li,
 .about li,
-.visit-list li {
+.visit-list li, .virtual li {
   width: 80vw;
   padding: 1rem;
   background-color: var(--third-color);
@@ -840,6 +840,30 @@ form label h2 {
   margin-top: -3rem;
 }
 
+/* virtual_tour */
+
+.virtual h2 {
+  color: var(--forth-color);
+}
+
+.virtual h5 {
+  margin-top: 6rem;
+  color: var(--primary-color);
+  font-size: 2rem
+}
+
+.virtual video {
+  margin-top: -6rem;
+}
+
+.virtual ul {
+  margin-right: 2rem
+}
+
+.team h2 {
+  color: var(--third-color);
+}
+
 @media screen and (min-width: 370px) {
   #offer-link {
     max-width: 20rem;
@@ -905,6 +929,13 @@ form label h2 {
   }
   .visit-list {
     margin-top: 6rem;
+  }
+
+  video {
+    width: 640px;
+    height: 560px;
+    margin-top: 6rem;
+
   }
 }
 
@@ -1000,6 +1031,7 @@ form label h2 {
   .art-item {
     margin: 2rem;
   }
+
 }
 
 @media screen and (min-width: 1200px) {
