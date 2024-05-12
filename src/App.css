@@ -1,7 +1,7 @@
 /* GENERAL STYLE */
 
 :root {
-  --primary-color: #7e655b;
+  --primary-color: #a16b56;
   --secondary-color: #679599;
   --third-color: #eddccd;
   --forth-color: #343434;
@@ -935,6 +935,10 @@ form label h2 {
   .visit-list {
     margin-top: 6rem;
   }
+
+  .visit-list li {
+    max-width: 17rem;
+}
 
   video {
     width: 640px;
