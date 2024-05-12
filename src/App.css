@@ -936,7 +936,7 @@ form label h2 {
     margin-top: 6rem;
   }
 
-  .visit-list li {
+  .visit-list li, .collection li {
     max-width: 17rem;
 }
 
