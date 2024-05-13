@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import CollectionHeader from "../../components/Collection/CollectionHeader";
 import SingleArt from "../../components/Collection/SingleArt";
 import FilteredItems from "../../components/Collection/FilteredItems";
@@ -40,6 +40,9 @@ export default function Collection() {
     changePage(nextPage);
   };
 
+  const memoizedPageData = useMemo(() => pageData(), [pageData]);
+
+
   if (isError) {
     return (
       <>
@@ -63,7 +66,7 @@ export default function Collection() {
           <CollectionHeader />
           <FilteredItems handleSubmit={handleSubmit} />
           <ul>
-            {pageData().map((item: GalleryItem) => (
+            {memoizedPageData.map((item: GalleryItem) => (
               <SingleArt key={item.id} item={item} />
             ))}
           </ul>

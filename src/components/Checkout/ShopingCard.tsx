@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { buildings } from "../../data/data-visit-museum";
 import SingleCard from "./SingleCard";
 import SubmitOrder from "./SubmitOrder";
@@ -12,14 +12,11 @@ export default function ShopingCard() {
     buildings.map(() => 0)
   );
 
-  const setInput = (index: number, value: number): void => {
+  const setInput = useCallback((index: number, value: number): void => {
     const newInputs = [...buildingInputs];
-    newInputs[index] = value;
-    if (value < 0) {
-      newInputs[index] = 0;
-    }
+    newInputs[index] = value < 0 ? 0 : value;
     setBuildingInputs(newInputs);
-  };
+  }, [buildingInputs]);
 
   const calculateTotal = () => {
     let totalPrice = 0;
