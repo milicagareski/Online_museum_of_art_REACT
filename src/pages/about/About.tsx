@@ -1,7 +1,7 @@
 import AboutHeader from "../../components/About/AboutHeader";
 import AboutInfo from "../../components/About/AboutInfo";
 import AboutSlider from "../../components/About/AboutSlider";
-import { createContext, useState } from "react";
+import { createContext, useState, useMemo, useCallback } from "react";
 import { AboutContextType } from "./about-types";
 
 export const AboutContext = createContext<AboutContextType | null>(null);
@@ -10,15 +10,25 @@ const ContextInfo = () => {
   const [showText, setShowText] = useState<Record<number, boolean>>({});
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const toggleTextVisibility = (itemId: number) => {
+  const toggleTextVisibility = useCallback((itemId: number) => {
     setShowText((prevState) => ({
       ...prevState,
       [itemId]: !prevState[itemId],
     }));
-  };
+  }, []);
+
+  const contextValue = useMemo(() => ({
+    toggleTextVisibility,
+    showText,
+    currentIndex,
+    setCurrentIndex
+  }), [toggleTextVisibility, showText, currentIndex, setCurrentIndex]);
+
+
+
 
   return (
-    <AboutContext.Provider value={{ toggleTextVisibility, showText, currentIndex, setCurrentIndex }}>
+    <AboutContext.Provider value={ contextValue}>
       <AboutSlider />
       <AboutInfo />
     </AboutContext.Provider>
