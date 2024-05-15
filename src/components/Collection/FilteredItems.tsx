@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { FilteredItemsProps } from "../../pages/collection/collection-types";
 
 export default function FilteredItems({ handleSubmit }: FilteredItemsProps) {
+  useEffect(()=>{
+    console.log("Handle Submit pressed");
+  }, [handleSubmit])
   return (
     <form id="filtered-items" onSubmit={handleSubmit}>
       <label htmlFor="departments-select">Choose department:</label>

@@ -21,6 +21,7 @@ export default function ShopingCard() {
   const calculateTotal = () => {
     let totalPrice = 0;
     buildingInputs.forEach((input, index) => {
+      // console.log(buildingInputs);
       totalPrice += input * buildings[index].price;
     });
     setTotal(totalPrice);

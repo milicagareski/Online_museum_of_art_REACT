@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import CollectionHeader from "../../components/Collection/CollectionHeader";
 import SingleArt from "../../components/Collection/SingleArt";
 import FilteredItems from "../../components/Collection/FilteredItems";
@@ -17,11 +17,12 @@ export default function Collection() {
     20
   );
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const value = (
       e.currentTarget.elements.namedItem("departments") as HTMLSelectElement
     )?.value.toLowerCase();
+    console.log("Testing UseCallback hook")
     if (value === "collection") {
       setCollection(
         "https://backend-online-museum-of-art-react.onrender.com/api/artworks"
@@ -29,7 +30,10 @@ export default function Collection() {
     } else {
       setCollection(`https://backend-online-museum-of-art-react.onrender.com/api/artworks/${value}`);
     }
-  };
+  },[collection])
+  
+  
+
 
   useEffect(() => {
     changePage(0);
@@ -38,22 +42,21 @@ export default function Collection() {
   const handleNextPage = () => {
     const nextPage = pageNumber + 1;
     changePage(nextPage);
-  };
+  }
+  
 
   const memoizedPageData = useMemo(() => pageData(), [pageData]);
-
 
   if (isError) {
     return (
       <>
-        <h1>The page do not exist</h1>
+        <h1>The page does not exist</h1>
         <button className="btn">
-          <Link to="/">back to home</Link>
+          <Link to="/">Back to home</Link>
         </button>
       </>
     );
   }
-
   return (
     <>
       {isLoading && (

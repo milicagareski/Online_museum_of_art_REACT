@@ -42,11 +42,9 @@ const useFetch = (url: string) => {
     }
   },[url, setIsLoading, setIsError, setItems])
 
-  console.log("callback")
-
   useEffect(() => {
     fetchData();
-  }, [url, fetchData]);
+  }, [url]);
 
   return { isLoading, items, isError };
 };
