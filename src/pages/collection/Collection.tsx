@@ -50,6 +50,8 @@ export default function Collection() {
     return pageData;
   }, [pageNumber, items]);
 
+  const [btn, setBtn] = useState(0)
+
   if (isError) {
     return (
       <>
@@ -69,6 +71,7 @@ export default function Collection() {
       )}
       {!isLoading && (
         <section className="container collection">
+        <button style={{display:"none"}} onClick={() => setBtn(btn + 1)} >{btn}</button>
           <CollectionHeader />
           <FilteredItems handleSubmit={handleSubmit} />
           <ul>
