@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 export interface GalleryItem {
   id: number;
@@ -22,7 +22,7 @@ const useFetch = (url: string) => {
   const [items, setItems] = useState<GalleryItem | GalleryItem[]>([]);
 
   
-  const fetchData = useCallback(async () => {
+  const fetchData = async () => {
     const controller = new AbortController();
     const abortSignal = controller.signal;
     try {
@@ -40,7 +40,7 @@ const useFetch = (url: string) => {
     } finally {
       setIsLoading(false);
     }
-  },[url, setIsLoading, setIsError, setItems])
+  }
 
   useEffect(() => {
     fetchData();

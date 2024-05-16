@@ -22,7 +22,6 @@ export default function Collection() {
     const value = (
       e.currentTarget.elements.namedItem("departments") as HTMLSelectElement
     )?.value.toLowerCase();
-    console.log("Testing UseCallback hook")
     if (value === "collection") {
       setCollection(
         "https://backend-online-museum-of-art-react.onrender.com/api/artworks"
@@ -45,7 +44,10 @@ export default function Collection() {
   }
   
 
-  const memoizedPageData = useMemo(() => pageData(), [pageData]);
+  const memoizedPageData = useMemo(() => {
+    console.log('Testing useMemo hook');
+    return pageData;
+  }, [pageNumber, items]);
 
   if (isError) {
     return (

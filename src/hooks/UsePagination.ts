@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 interface PaginationResult<T> {
   pageNumber: number;
   pageCount: number;
   changePage: (pageNumber: number) => void;
-  pageData: () => T[];
+  pageData: T[]
 }
 
 function usePagination<T>(items: T[], pageLimit: number): PaginationResult<T> {
@@ -15,11 +15,11 @@ function usePagination<T>(items: T[], pageLimit: number): PaginationResult<T> {
     setPageNumber(pN);
   };
 
-  const pageData = () => {
+  const pageData = useMemo(() => {
     const s = pageNumber * pageLimit;
     const e = s + pageLimit;
     return items.slice(s, e);
-  };
+  }, [pageNumber, items, pageLimit]);
 
   return { pageNumber, pageCount, changePage, pageData };
 }
