@@ -472,6 +472,24 @@ footer p {
   scale: 1.2;
 }
 
+.stars {
+  margin-bottom: 2rem;
+}
+
+#rating {
+  max-width: 423px;
+}
+
+.star {
+  font-size: 2.5rem;
+  color: var(--third-color);
+}
+
+.star:hover {
+  color: var(--forth-color);
+  transition: var(--transition);
+  cursor: pointer;
+}
 /* contact */
 
 .form-contact {

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import CollectionHeader from "../../components/Collection/CollectionHeader";
 import SingleArt from "../../components/Collection/SingleArt";
 import FilteredItems from "../../components/Collection/FilteredItems";
+import Rating from "../../components/Collection/Rating";
 import useFetch from "../../hooks/UseFetch";
 import usePagination from "../../hooks/UsePagination";
 import { GalleryItem } from "../../hooks/UseFetch";
@@ -94,6 +95,7 @@ export default function Collection() {
               Next
             </button>
           </article>
+          <Rating/>
         </section>
       )}
     </>
