@@ -201,7 +201,8 @@ ul {
 
 #welcome,
 #explore,
-#collection, #virtual {
+#collection,
+#virtual {
   font-size: 3rem;
   color: var(--third-color);
   margin-top: -1rem;
@@ -322,7 +323,8 @@ footer p {
 .about ul,
 .collection ul,
 .visit-list,
-.select-card, .virtual ul {
+.select-card,
+.virtual ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -343,14 +345,16 @@ footer p {
 
 .about ul li,
 .collection ul li .visit-list li,
-.select-card article, .virtual ul li {
+.select-card article,
+.virtual ul li {
   list-style-type: none;
   max-width: 17rem;
   overflow: hidden;
   margin: 1rem;
 }
 
-.about li, .virtual li {
+.about li,
+.virtual li {
   height: 62rem;
   overflow: hidden;
 }
@@ -457,7 +461,8 @@ footer p {
 .btn {
   font-size: 2rem;
 }
-.btn, .about-btn {
+.btn,
+.about-btn {
   background-color: transparent;
   border: 2px solid var(--forth-color);
   text-transform: uppercase;
@@ -465,7 +470,8 @@ footer p {
   transition: var(--transition);
 }
 
-.btn:hover, .about-btn:hover {
+.btn:hover,
+.about-btn:hover {
   color: var(--third-color);
   background-color: var(--forth-color);
   border-color: var(--third-color);
@@ -766,7 +772,8 @@ form label h2 {
 
 .collection li,
 .about li,
-.visit-list li, .virtual li {
+.visit-list li,
+.virtual li {
   width: 80vw;
   padding: 1rem;
   background-color: var(--third-color);
@@ -872,7 +879,7 @@ form label h2 {
 .virtual h5 {
   margin-top: 6rem;
   color: var(--primary-color);
-  font-size: 2rem
+  font-size: 2rem;
 }
 
 .virtual video {
@@ -880,7 +887,7 @@ form label h2 {
 }
 
 .virtual ul {
-  margin-right: 2rem
+  margin-right: 2rem;
 }
 
 .team h2 {
@@ -954,15 +961,15 @@ form label h2 {
     margin-top: 6rem;
   }
 
-  .visit-list li, .collection li {
+  .visit-list li,
+  .collection li {
     max-width: 17rem;
-}
+  }
 
   video {
     width: 640px;
     height: 560px;
     margin-top: 6rem;
-
   }
 
   .about ul {
@@ -1062,7 +1069,6 @@ form label h2 {
   .art-item {
     margin: 2rem;
   }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -1127,42 +1133,6 @@ form label h2 {
     display: none;
   }
 
-  .nav-links {
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 1rem;
-    margin-left: 1rem;
-  }
-  .nav-links li {
-    font-size: 1.5rem;
-    border: none;
-    margin-top: -0.5rem;
-    padding: 1rem;
-  }
-  #nav-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100px;
-    display: block;
-  }
-  nav {
-    display: inline;
-  }
-
-  .hide-nav {
-    display: block;
-    transition: none;
-    height: 80px;
-  }
-  .show-nav {
-    display: block;
-    transition: none;
-    height: 80px;
-  }
-  nav {
-    margin-top: -5rem;
-  }
   .title {
     display: inline;
   }
