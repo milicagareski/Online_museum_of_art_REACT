@@ -6,7 +6,7 @@ export default function SingleItemDetails() {
   const { itemId } = useParams<any>();
 
   const { isLoading, items, isError } = useFetch(
-    `https://backend-online-museum-of-art-react.onrender.com/api/artworks/${itemId}`
+    `http://localhost:5000/api/artworks/${itemId}`
   );
 
   if (isLoading) {

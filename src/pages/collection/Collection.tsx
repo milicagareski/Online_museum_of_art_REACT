@@ -18,22 +18,20 @@ export default function Collection() {
     20
   );
 
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const value = (
-      e.currentTarget.elements.namedItem("departments") as HTMLSelectElement
-    )?.value.toLowerCase();
-    if (value === "collection") {
-      setCollection(
-        "https://backend-online-museum-of-art-react.onrender.com/api/artworks"
-      );
-    } else {
-      setCollection(`https://backend-online-museum-of-art-react.onrender.com/api/artworks/${value}`);
-    }
-  },[collection])
-  
-  
-
+  const handleSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      const value = (
+        e.currentTarget.elements.namedItem("departments") as HTMLSelectElement
+      )?.value.toLowerCase();
+      if (value === "collection") {
+        setCollection("http://localhost:5000/api/artworks");
+      } else {
+        setCollection(`http://localhost:5000/api/artworks/${value}`);
+      }
+    },
+    [collection]
+  );
 
   useEffect(() => {
     changePage(0);
@@ -42,15 +40,14 @@ export default function Collection() {
   const handleNextPage = () => {
     const nextPage = pageNumber + 1;
     changePage(nextPage);
-  }
-  
+  };
 
   const memoizedPageData = useMemo(() => {
-    console.log('Testing useMemo hook');
+    console.log("Testing useMemo hook");
     return pageData;
   }, [pageNumber, items]);
 
-  const [btn, setBtn] = useState(0)
+  const [btn, setBtn] = useState(0);
 
   if (isError) {
     return (
@@ -71,7 +68,9 @@ export default function Collection() {
       )}
       {!isLoading && (
         <section className="container collection">
-        <button style={{display:"none"}} onClick={() => setBtn(btn + 1)} >{btn}</button>
+          <button style={{ display: "none" }} onClick={() => setBtn(btn + 1)}>
+            {btn}
+          </button>
           <CollectionHeader />
           <FilteredItems handleSubmit={handleSubmit} />
           <ul>
@@ -98,7 +97,7 @@ export default function Collection() {
               Next
             </button>
           </article>
-          <Rating/>
+          <Rating />
         </section>
       )}
     </>
